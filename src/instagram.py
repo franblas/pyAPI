@@ -24,7 +24,7 @@ class Instagram(API):
             res['longitude'].append(self._tools.key_test('longitude',d['location'],'float'))
             res['name'].append(self._tools.key_test('name',d['location']))
             res['count_com'].append(self._tools.key_test('count',d['comments'],'int'))
-            res['com'].append(self._tools.key_test('data',d['comments']))
+            res['com'].append(self._tools.key_test('data',d['comments'],'list'))
             res['count_like'].append(self._tools.key_test('count',d['likes'],'int'))
             res['title'].append(self._tools.key_test('text',d['caption']))
         return res  

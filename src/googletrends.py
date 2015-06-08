@@ -19,7 +19,7 @@ class GoogleTrends(API):
   
     def _parsing_data(self,data,idd):
         res = {'trends':list()}
-        for d in data['X'+str(idd)]:
+        for d in data[str(idd)]:
             res['trends'].append(self._tools._encode_str(d))
         return res  
         

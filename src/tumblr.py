@@ -19,7 +19,7 @@ class Tumblr(API):
     
     def _parsing_data(self,data):
         res = {'slug':list(),'tags':list(),'note':list(),'url':list(),'date':list()}
-        for d in data['photos']:
+        for d in data['response']:
             res['slug'].append(self._tools.key_test('slug',d))
             res['url'].append(self._tools.key_test('post_url',d))
             res['tags'].append(self._tools.key_test('tags',d,'list'))

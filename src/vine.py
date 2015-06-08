@@ -16,9 +16,9 @@ class Vine(API):
  
     def _parsing_data(self,data):
         res = {'url':list(),'description':list()}
-        for d in data['data']:
-            res['description'].append(self._tools.key_test('description',d['records']))
-            res['url'].append(self._tools.key_test('permalinkUrl',d['records']))
+        for d in data['data']['records']:
+            res['description'].append(self._tools.key_test('description',d))
+            res['url'].append(self._tools.key_test('permalinkUrl',d))
         return res  
         
     def get_popular(self):

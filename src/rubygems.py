@@ -19,8 +19,8 @@ class RubyGems(API):
         for d in data:
             res['name'].append(self._tools.key_test('name',d))
             res['downloads'].append(self._tools.key_test('downloads',d,'int'))
-            res['info'].append(self._tools.key_test('tags',d))
-            res['url'].append(self._tools.key_test('note_count',d))
+            res['info'].append(self._tools.key_test('info',d))
+            res['url'].append(self._tools.key_test('homepage_uri',d))
         return res  
         
     def search(self,text=''):

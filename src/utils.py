@@ -28,13 +28,29 @@ class Utils(object):
             return ''
         else:    
             return text.encode(self._general_encoding)
-            
+     
+    def _avoid_none(self,x,t='float'):
+        if x is None:
+            if t == 'float':
+                return 0.0
+            elif t == 'int':
+                return 0
+            else:
+                return
+        else:
+            return x
+       
     def key_test(self,key,d,t='str'):
-        if key in d:
+        if d is not None and key in d:
             if t == 'str':
                 return self._encode_str(d[key])
             else:
-                return d[key]
+                if t == 'float':
+                    return self._avoid_none(d[key],'float')
+                elif t == 'int':
+                    return self._avoid_none(d[key],'int')
+                else:
+                    return d[key]
         else:
             if t == 'str':
                 return ''

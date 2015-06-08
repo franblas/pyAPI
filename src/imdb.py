@@ -16,24 +16,22 @@ class IMDB(API):
     _api_url2 = 'http://www.omdbapi.com/'
     
     def _parsing_data(self,data):
-        res = {'popular':list(),'exact':list(),'substring':list()}
-        for d in data:
-            res['popular'].append(self._tools.key_test('name',d['name_popular']))
-            res['exact'].append(self._tools.key_test('name',d['name_exact']))
-            res['substring'].append(self._tools.key_test('name',d['name_substring']))
+        res = {'popular':list(),'exact':list()}
+        for d,dd in zip(data['name_popular'],data['name_exact']):
+            res['popular'].append(self._tools.key_test('name',d))
+            res['exact'].append(self._tools.key_test('name',dd))
         return res  
 
     def _parsing_data2(self,data):
-        res = {'popular':list(),'exact':list(),'substring':list()}
-        for d in data:
-            res['popular'].append(self._tools.key_test('title',d['title_popular']))
-            res['exact'].append(self._tools.key_test('title',d['title_exact']))
-            res['substring'].append(self._tools.key_test('title',d['title_substring']))
+        res = {'popular':list(),'exact':list()}
+        for d,dd in zip(data['title_exact'],data['title_popular']):
+            res['popular'].append(self._tools.key_test('title',dd))
+            res['exact'].append(self._tools.key_test('title',d))
         return res 
         
     def _parsing_data3(self,data):
         res = {'title':list(),'year':list(),'type':list()}
-        for d in data['search']:
+        for d in data['Search']:
             res['title'].append(self._tools.key_test('Title',d))
             res['year'].append(self._tools.key_test('Year',d))
             res['type'].append(self._tools.key_test('Type',d))

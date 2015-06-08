@@ -22,7 +22,7 @@ class GoogleBooks(API):
             res['canonicalVolumeLink'].append(self._tools.key_test('canonicalVolumeLink',d['volumeInfo']))
             res['description'].append(self._tools.key_test('description',d['volumeInfo']))
             res['pageCount'].append(self._tools.key_test('pageCount',d['volumeInfo'],'int'))
-            res['title'].append(self._tools.key_test('categories',d['volumeInfo']))
+            res['categories'].append(self._tools.key_test('categories',d['volumeInfo'],'list'))
         return res  
         
     def search_by_author(self,author='',limit=10):

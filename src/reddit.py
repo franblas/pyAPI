@@ -16,21 +16,21 @@ class Reddit(API):
     
     def _parsing_data(self,data):
         res = {'title':list(),'text':list(),'url':list(),'score':list(),'ups':list(),'num_comments':list(),'subreddit':list()}
-        for d in data['data']:
-            res['title'].append(self._tools.key_test('title',d['children']['data']))
-            res['text'].append(self._tools.key_test('selftext',d['children']['data']))
-            res['url'].append(self._tools.key_test('url',d['children']['data']))
-            res['score'].append(self._tools.key_test('score',d['children']['data'],'float'))
-            res['ups'].append(self._tools.key_test('ups',d['children']['data'],'int'))
-            res['subreddit'].append(self._tools.key_test('subreddit',d['children']['data']))
-            res['num_comments'].append(self._tools.key_test('num_comments',d['children']['data'],'int'))
+        for d in data['data']['children']:
+            res['title'].append(self._tools.key_test('title',d['data']))
+            res['text'].append(self._tools.key_test('selftext',d['data']))
+            res['url'].append(self._tools.key_test('url',d['data']))
+            res['score'].append(self._tools.key_test('score',d['data'],'float'))
+            res['ups'].append(self._tools.key_test('ups',d['data'],'int'))
+            res['subreddit'].append(self._tools.key_test('subreddit',d['data']))
+            res['num_comments'].append(self._tools.key_test('num_comments',d['data'],'int'))
         return res  
     
     def _parsing_data2(self,data):
         res = {'name':list(),'subscribers':list()}
-        for d in data['data']:
-            res['name'].append(self._tools.key_test('display_name',d['children']['data']))
-            res['subscribers'].append(self._tools.key_test('subscribers',d['children']['data'],'list'))
+        for d in data['data']['children']:
+            res['name'].append(self._tools.key_test('display_name',d['data']))
+            res['subscribers'].append(self._tools.key_test('subscribers',d['data'],'list'))
         return res     
 
     def search(self,text='',limit=10):

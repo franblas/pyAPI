@@ -18,15 +18,15 @@ class OSM(API):
     def _parsing_data(self,data):
         res = {'comment':list(),'coordinates':list()}
         for d in data['features']:
-            res['comment'].append(self._tools.key_test('comments',d['properties']))
+            res['comment'].append(self._tools.key_test('comments',d['properties'],'list'))
             res['coordinates'].append(self._tools.key_test('coordinates',d['geometry'],'list'))
         return res  
         
     def _parsing_data2(self,data):
         res = {'latitude':list(),'longitude':list(),'name':list(),'importance':list()}
         for d in data:
-            res['latitude'].append(self._tools.key_test('latitude',d,'float'))
-            res['longitude'].append(self._tools.key_test('longitude',d,'float'))
+            res['latitude'].append(float(self._tools.key_test('lat',d)))
+            res['longitude'].append(float(self._tools.key_test('lon',d)))
             res['name'].append(self._tools.key_test('display_name',d))
             res['importance'].append(self._tools.key_test('importance',d,'int'))
         return res     
@@ -46,5 +46,5 @@ class OSM(API):
         return self._parsing_data2(data) 
         
     def get_coordinates_city(self,text=''):
-        res = self.search(text)
+        res = self.search(text,limit=2)
         return res['latitude'][0],res['longitude'][0]
