@@ -5,7 +5,7 @@ Created on Fri Jun 05 20:31:49 2015
 @author: Paco
 """
 
-import urllib, json
+import urllib, json, requests
 
 class Utils(object):
     
@@ -21,6 +21,11 @@ class Utils(object):
     def data_from_url(self,url):
         response = urllib.urlopen(url);        
         data = json.loads(response.read())
+        return data
+
+    def data_from_url_flickr(self,url):
+        response = requests.get(url)
+        data = json.loads(response.content.replace('jsonFlickrApi(','')[:-1])
         return data
         
     def _encode_str(self,text):
