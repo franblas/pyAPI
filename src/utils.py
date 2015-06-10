@@ -12,6 +12,7 @@ class Utils(object):
     _class_name = 'Utils'    
     _category = 'Useful'
     _general_encoding = 'utf8'
+    _rss_url_parser = 'https://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=' 
     
     def __init__(self): pass
     
@@ -27,6 +28,10 @@ class Utils(object):
         response = requests.get(url)
         data = json.loads(response.content.replace('jsonFlickrApi(','')[:-1])
         return data
+        
+    def rss_parser(self,url):
+        temp = self._rss_url_parser+str(url)
+        return self.data_from_url(temp)      
         
     def _encode_str(self,text):
         if text is None:
