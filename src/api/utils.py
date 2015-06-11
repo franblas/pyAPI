@@ -6,6 +6,7 @@ Created on Fri Jun 05 20:31:49 2015
 """
 
 import urllib, json, requests
+from verbose import Verbose
 
 class Utils(object):
     
@@ -13,6 +14,7 @@ class Utils(object):
     _category = 'Useful'
     _general_encoding = 'utf8'
     _rss_url_parser = 'https://ajax.googleapis.com/ajax/services/feed/load?v=2.0&q=' 
+    _verbose = True    
     
     def __init__(self): pass
     
@@ -20,15 +22,29 @@ class Utils(object):
         return self._class_name,self._category    
 
     def data_from_url(self,url):
-        response = urllib.urlopen(url);        
-        data = json.loads(response.read())
-        return data
+        try:
+            response = urllib.urlopen(url)    
+            data = json.loads(response.read())
+            if self._verbose:
+                Verbose('GET: '+url).cprint()
+            return data    
+        except:
+            if self._verbose:
+                Verbose('GET: '+url).cprint(Verbose._colors.RED)
+            return {}
 
     def data_from_url_flickr(self,url):
-        response = requests.get(url)
-        data = json.loads(response.content.replace('jsonFlickrApi(','')[:-1])
-        return data
-        
+        try:
+            response = requests.get(url)
+            data = json.loads(response.content.replace('jsonFlickrApi(','')[:-1])
+            if self._verbose:
+                Verbose('GET: '+url).cprint()
+            return data
+        except:
+            if self._verbose:
+                Verbose('GET: '+url).cprint(Verbose._colors.RED)
+            return {}
+            
     def rss_parser(self,url):
         temp = self._rss_url_parser+str(url)
         return self.data_from_url(temp)      
