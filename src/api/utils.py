@@ -64,7 +64,12 @@ class Utils(object):
             else:
                 return
         else:
-            return x
+            if t == 'float':
+                return float(x)
+            elif t == 'int':
+                return int(x)
+            else:
+                return x
        
     def key_test(self,key,d,t='str'):
         if d is not None and key in d:

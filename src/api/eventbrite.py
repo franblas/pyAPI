@@ -21,8 +21,8 @@ class Eventbrite(API):
         res = {'url':list(),'category':list(),'latitude':list(),'longitude':list(),'name':list(),'past':list(),'future':list(),'description':list()}
         for d in data['events']:
             res['url'].append(self._tools.key_test('url',d))
-            res['latitude'].append(self._tools.key_test('latitude',d['venue']))
-            res['longitude'].append(self._tools.key_test('longitude',d['venue']))
+            res['latitude'].append(self._tools.key_test('latitude',d['venue'],'float'))
+            res['longitude'].append(self._tools.key_test('longitude',d['venue'],'float'))
             res['name'].append(self._tools.key_test('text',d['name']))
             res['category'].append(self._tools.key_test('name',d['category']))
             res['past'].append(self._tools.key_test('num_past_events',d['organizer'],'int'))
