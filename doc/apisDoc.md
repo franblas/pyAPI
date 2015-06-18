@@ -174,7 +174,7 @@ get_stories(limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -217,7 +217,7 @@ get_hot()
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -253,7 +253,7 @@ new_products()
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -273,7 +273,7 @@ search_videos(text='',limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -315,7 +315,7 @@ search_playlists(text='',limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -341,7 +341,7 @@ search_groups(text='',limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -367,7 +367,7 @@ get_recent(limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -394,7 +394,7 @@ search(text='', limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -422,7 +422,7 @@ search(text='', limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -460,7 +460,7 @@ get_most_watched(limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>KeyKey</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -498,7 +498,7 @@ get_similar(idd='121187584160', limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -533,7 +533,7 @@ get_popular_search(text='')
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -562,7 +562,7 @@ get_by_city(text='')
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -609,7 +609,7 @@ search_book(text='', limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -651,7 +651,7 @@ get_trends(name='USA')
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -671,7 +671,7 @@ search_omdb(text='')
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -698,7 +698,7 @@ search_title(text='')
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -721,7 +721,7 @@ search_name(text='')
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -748,7 +748,7 @@ search_by_coordinates(lat=48.858844,lon=2.294351,limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -795,7 +795,7 @@ get_tags(text='')
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -818,7 +818,7 @@ search_locations(lat=48.858844,lon=2.294351,limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -844,7 +844,7 @@ search_users(text='',limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -876,7 +876,7 @@ search_notes(text='', limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -899,7 +899,7 @@ search(text='', limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -930,7 +930,7 @@ get_coordinates_city(text='')
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -957,7 +957,7 @@ get_photos_area(latitude=0, longitude=0, range=5, limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -1003,7 +1003,7 @@ get_controversial(limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -1047,7 +1047,7 @@ search_subreddits(text='',limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -1077,7 +1077,7 @@ latest_updated()
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -1108,7 +1108,7 @@ total_download_gems <- function(.)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -1134,7 +1134,7 @@ get_latest_tracks(limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -1185,7 +1185,7 @@ search_users(text='', limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -1232,7 +1232,7 @@ search_groups(text='', limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -1271,7 +1271,7 @@ get_latest_comments(limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -1295,7 +1295,7 @@ search(text='', limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -1331,7 +1331,7 @@ search()
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -1358,7 +1358,7 @@ search(text='')
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
@@ -1400,7 +1400,7 @@ get_latest_changes(limit=10)
 <table>
 <thead>
 <tr>
-	<th>Column</th>
+	<th>Key</th>
 	<th>Description</th>
 </tr>
 </thead>
