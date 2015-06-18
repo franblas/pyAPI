@@ -6,3 +6,6 @@ Data from multiple APIs with python
 ```
 pip install urllib, json, requests, colorama
 ```
+
+## Documentation  
+[Documentation of APIs](doc/apisDoc.md)
