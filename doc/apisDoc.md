@@ -17,137 +17,137 @@
 	<td>Yes</td>
 </tr>
 <tr>
-	<td>9 Gag</td>
+	<td><a href='#9gag'>9 Gag</a></td>
 	<td>Social</td>
 	<td>No</td>
 </tr>
 <tr>
-	<td>Crunchbase</td>
+	<td><a href='#crunchbase'>Crunchbase</a></td>
 	<td>Data</td>
 	<td>Yes</td>
 </tr>
 <tr>
-	<td>Dailymotion</td>
+	<td><a href='#dailymotion'>Dailymotion</a></td>
 	<td>Video</td>
 	<td>No</td>
 </tr>
 <tr>
-	<td>Delicious</td>
+	<td><a href='#delicious'>Delicious</a></td>
 	<td>Social</td>
 	<td>No</td>
 </tr>
 <tr>
-	<td>Docker</td>
+	<td><a href='#docker'>Docker</a></td>
 	<td>Code</td>
 	<td>No</td>
 </tr>
 <tr>
-	<td>Ebay</td>
+	<td><a href='#ebay'>Ebay</a></td>
 	<td>Shopping</td>
 	<td>Yes</td>
 </tr>
 <tr>
-	<td>Eventbrite</td>
+	<td><a href='#eventbrite'>Eventbrite</a></td>
 	<td>Event</td>
 	<td>Yes</td>
 </tr>
 <tr>
-	<td>Eventful</td>
+	<td><a href='#eventful'>Eventful</a></td>
 	<td>Event</td>
 	<td>Yes</td>
 </tr>
 <tr>
-	<td>Flickr</td>
+	<td><a href='#flickr'>Flickr</a></td>
 	<td>Picture</td>
 	<td>Yes</td>
 </tr>
 <tr>
-	<td>Freebase</td>
+	<td><a href='#freebase'>Freebase</a></td>
 	<td>Data</td>
 	<td>Yes</td>
 </tr>
 <tr>
-	<td>GoogleBooks</td>
+	<td><a href='#googlebooks'>GoogleBooks</a></td>
 	<td>Book</td>
 	<td>No</td>
 </tr>
 <tr>
-	<td>GoogleTrends</td>
+	<td><a href='#googletrends'>GoogleTrends</a></td>
 	<td>Data</td>
 	<td>No</td>
 </tr>
 <tr>
-	<td>Imdb</td>
+	<td><a href='#imdb'>Imdb</a></td>
 	<td>Movie</td>
 	<td>No</td>
 </tr>
 <tr>
-	<td>Instagram</td>
+	<td><a href='#instagram'>Instagram</a></td>
 	<td>Picture</td>
 	<td>Yes</td>
 </tr>
 <tr>
-	<td>Osm</td>
+	<td><a href='#osm'>Osm</a></td>
 	<td>Map</td>
 	<td>No</td>
 </tr>
 <tr>
-	<td>Panoramio</td>
+	<td><a href='#panoramio'>Panoramio</a></td>
 	<td>Picture</td>
 	<td>No</td>
 </tr>
 <tr>
-	<td>Pinterest</td>
+	<td><a href='#pinterest'>Pinterest</a></td>
 	<td>Social</td>
 	<td>No</td>
 </tr>
 <tr>
-	<td>Reddit</td>
+	<td><a href='#reddit'>Reddit</a></td>
 	<td>Social</td>
 	<td>No</td>
 </tr>
 <tr>
-	<td>RubyGems</td>
+	<td><a href='#rubygems'>RubyGems</a></td>
 	<td>Code</td>
 	<td>No</td>
 </tr>
 <tr>
-	<td>SoundCloud</td>
+	<td><a href='#soundcloud'>SoundCloud</a></td>
 	<td>Music</td>
 	<td>Yes</td>
 </tr>
 <tr>
-	<td>Spotify</td>
+	<td><a href='#spotify'>Spotify</a></td>
 	<td>Music</td>
-	<td>Yes</td>
+	<td>No</td>
 </tr>
 <tr>
-	<td>Ted</td>
+	<td><a href='#ted'>Ted</a></td>
 	<td>Event</td>
 	<td>Yes</td>
 </tr>
 <tr>
-	<td>The Movie Database</td>
+	<td><a href='#themoviedatabase'>The Movie Database</a></td>
 	<td>Movie</td>
 	<td>Yes</td>
 </tr>
 <tr>
-	<td>Tumblr</td>
+	<td><a href='#tumblr'>Tumblr</a></td>
 	<td>Social</td>
 	<td>No</td>
 </tr>
 <tr>
-	<td>Venmo</td>
+	<td><a href='#venmo'>Venmo</a></td>
 	<td>Payement</td>
 	<td>No</td>
 </tr>
 <tr>
-	<td>Vine</td>
+	<td><a href='#vine'>Vine</a></td>
 	<td>Video</td>
 	<td>No</td>
 </tr>
 <tr>
-	<td>Wikipedia</td>
+	<td><a href='#wikipedia'>Wikipedia</a></td>
 	<td>Data</td>
 	<td>No</td>
 </tr>
@@ -155,18 +155,21 @@
 </table>
 
 ## <a id="500px"></a>500 px
-### Dataframe
+### Dictionary structure
 ```
-getPopular <- function(.,nblimit=10)       
+get_popular(limit=10)       
 ```  
 ```
-getBestReated <- function(.,nblimit=10)       
+get_best_rated(limit=10)       
 ```  
 ```
-getToday <- function(.,nblimit=10)       
+get_today(limit=10)       
 ```  
 ```
-searchPictures <- function(.,search="",nblimit=10)       
+search(text='',limit=10)       
+```
+```
+get_stories(limit=10)
 ```
 <table>
 <thead>
@@ -203,40 +206,13 @@ searchPictures <- function(.,search="",nblimit=10)
 </tbody>
 </table>
 
-### Dataframe 2
+## <a id="9gag"></a>9 Gag
+### Dictionary structure
 ```
-getStories <- function(.,nblimit=10)       
-```  
-<table>
-<thead>
-<tr>
-	<th>Column</th>
-	<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td>title</td>
-	<td>Name of the picture</td>
-</tr>
-<tr>
-	<td>usercountry</td>
-	<td>Original country of the user</td>
-</tr>
-<tr>
-	<td>username</td>
-	<td>Full name of the user</td>
-</tr>
-</tbody>
-</table>
-
-## 9 Gag
-### Dataframe
-```
-getTrend <- function(.)
+get_trend()
 ```  
 ```
-getHot <- function(.)
+get_hot()
 ```
 <table>
 <thead>
@@ -257,22 +233,22 @@ getHot <- function(.)
 </tbody>
 </table>
 
-## Crunchbase
-## Dataframe
+## <a id="crunchbase"></a>Crunchbase
+## Dictionary structure
 ```
-newOrganisations <- function(.)
+new_organisations()
 ```  
 ```
-updatedOrganizations <- function(.)
+updated_organizations()
 ```  
 ```
-searchOrganization <- function(.,text="")
+search_organization(text='')
 ```  
 ```
-newPeople <- function(.)
+new_people()
 ```  
 ```
-newProducts <- function(.)
+new_products()
 ```  
 <table>
 <thead>
@@ -289,10 +265,10 @@ newProducts <- function(.)
 </tbody>
 </table>
 
-## Dailymotion
-### Dataframe
+## <a id="dailymotion"></a>Dailymotion
+### Dictionary structure
 ```
-searchVideos <- function(., text="",limit=10)
+search_videos(text='',limit=10)
 ```  
 <table>
 <thead>
@@ -307,15 +283,15 @@ searchVideos <- function(., text="",limit=10)
 	<td>Name of the video</td>
 </tr>
 <tr>
-	<td>views_total</td>
+	<td>views</td>
 	<td>Total views for the video</td>
 </tr>
 <tr>
-	<td>bookmarks_total</td>
+	<td>bookmarks</td>
 	<td>Total number of bookmarks for the video</td>
 </tr>
 <tr>
-	<td>comments_total</td>
+	<td>comments</td>
 	<td>Total number of comments for the video</td>
 </tr>
 <tr>
@@ -332,9 +308,9 @@ searchVideos <- function(., text="",limit=10)
 </tr>
 </tbody>
 </table>
-### Dataframe 2
+### Dictionary structure 2
 ```
-searchPlaylists <- function(., text="",limit=10)
+search_playlists(text='',limit=10)
 ```  
 <table>
 <thead>
@@ -345,7 +321,7 @@ searchPlaylists <- function(., text="",limit=10)
 </thead>
 <tbody>
 <tr>
-	<td>name</td>
+	<td>title</td>
 	<td>Name of the playlist</td>
 </tr>
 <tr>
@@ -353,14 +329,14 @@ searchPlaylists <- function(., text="",limit=10)
 	<td>Description of the playlist</td>
 </tr>
 <tr>
-	<td>videos_total</td>
+	<td>videos</td>
 	<td>Total number of videos into the playlist</td>
 </tr>
 </tbody>
 </table>
-### Dataframe 3
+### Dictionary structure 3
 ```
-searchGroups <- function(., text="",limit=10)
+search_groups(text='',limit=10)
 ```  
 <table>
 <thead>
@@ -371,7 +347,7 @@ searchGroups <- function(., text="",limit=10)
 </thead>
 <tbody>
 <tr>
-	<td>name</td>
+	<td>title</td>
 	<td>Name of the group</td>
 </tr>
 <tr>
@@ -380,13 +356,13 @@ searchGroups <- function(., text="",limit=10)
 </tr>
 </tbody>
 </table>
-## Delicious
-### Dataframe
+## <a id="delicious"></a>Delicious
+### Dictionary structure
 ```
-search <- function(., text="", limit=10)
+search(text='', limit=10)
 ```  
 ```
-getRecent <- function(., limit=10)
+get_recent(limit=10)
 ```  
 <table>
 <thead>
@@ -410,10 +386,10 @@ getRecent <- function(., limit=10)
 </tr>
 </tbody>
 </table>
-## Docker
-### Dataframe
+## <a id="docker"></a>Docker
+### Dictionary structure
 ```
-search <- function(., text="", limit=100)
+search(text='', limit=10)
 ```  
 <table>
 <thead>
@@ -438,10 +414,10 @@ search <- function(., text="", limit=100)
 </tbody>
 </table>
 
-## Ebay
-### Dataframe
+## <a id="ebay"></a>Ebay
+### Dictionary structure
 ```
-search <- function(., text="", limit=10)
+search(text='', limit=10)
 ```  
 <table>
 <thead>
@@ -452,7 +428,7 @@ search <- function(., text="", limit=10)
 </thead>
 <tbody>
 <tr>
-	<td>itemId</td>
+	<td>id</td>
 	<td>Id of the item</td>
 </tr>
 <tr>
@@ -460,11 +436,11 @@ search <- function(., text="", limit=10)
 	<td>Name of the announce</td>
 </tr>
 <tr>
-	<td>primaryCategory</td>
+	<td>category</td>
 	<td>Category of the item</td>
 </tr>
 <tr>
-	<td>viewItemURL</td>
+	<td>url</td>
 	<td>Url of the announce</td>
 </tr>
 <tr>
@@ -472,14 +448,14 @@ search <- function(., text="", limit=10)
 	<td>Location of the announce</td>
 </tr>
 <tr>
-	<td>sellingStatus</td>
+	<td>status</td>
 	<td>Price of the item</td>
 </tr>
 </tbody>
 </table>
-### Dataframe 2
+### Dictionary structure 2
 ```
-getMostWatched <- function(., limit=10)
+get_most_watched(limit=10)
 ```  
 <table>
 <thead>
@@ -490,72 +466,34 @@ getMostWatched <- function(., limit=10)
 </thead>
 <tbody>
 <tr>
-	<td>itemRecommendations.item.itemId</td>
+	<td>id</td>
 	<td>Id of the item</td>
 </tr>
 <tr>
-	<td>itemRecommendations.item.title</td>
+	<td>title</td>
 	<td>Name of the announce</td>
 </tr>
 <tr>
-	<td>itemRecommendations.item.primaryCategoryName</td>
+	<td>category</td>
 	<td>Category of the item</td>
 </tr>
 <tr>
-	<td>itemRecommendations.item.viewItemURL</td>
+	<td>url</td>
 	<td>Url of the announce</td>
 </tr>
 <tr>
-	<td>itemRecommendations.item.country</td>
+	<td>country</td>
 	<td>Original country of the announce</td>
 </tr>
 <tr>
-	<td>itemRecommendations.item.buyItNowPrice</td>
-	<td>Price of the item</td>
-</tr>
-<tr>
-	<td>itemRecommendations.item.originalPrice</td>
-	<td>riginal price of the item</td>
-</tr>
-</tbody>
-</table>
-### Dataframe 3
-```
-getSimilar <- function(., id="121187584160", limit=10)
-```  
-<table>
-<thead>
-<tr>
-	<th>Column</th>
-	<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td>itemRecommendations.item.title</td>
-	<td>Name of the announce</td>
-</tr>
-<tr>
-	<td>itemRecommendations.item.primaryCategoryName</td>
-	<td>Category of the item</td>
-</tr>
-<tr>
-	<td>itemRecommendations.item.viewItemURL</td>
-	<td>Url of the announce</td>
-</tr>
-<tr>
-	<td>itemRecommendations.item.country</td>
-	<td>Original country of the announce</td>
-</tr>
-<tr>
-	<td>itemRecommendations.item.buyItNowPrice</td>
+	<td>price</td>
 	<td>Price of the item</td>
 </tr>
 </tbody>
 </table>
-### Dataframe 4
+### Dictionary structure 3
 ```
-getTopSelling <- function(., limit=10)
+get_similar(idd='121187584160', limit=10)
 ```  
 <table>
 <thead>
@@ -566,26 +504,31 @@ getTopSelling <- function(., limit=10)
 </thead>
 <tbody>
 <tr>
-	<td>productRecommendations.product</td>
-	<td>Id of the product</td>
+	<td>title</td>
+	<td>Name of the announce</td>
 </tr>
 <tr>
-	<td>productRecommendations.product.title</td>
-	<td>Title of the announce</td>
+	<td>category</td>
+	<td>Category of the item</td>
 </tr>
 <tr>
-	<td>productRecommendations.product.reviewCount</td>
-	<td>Number of view</td>
+	<td>url</td>
+	<td>Url of the announce</td>
 </tr>
 <tr>
-	<td>productRecommendations.product.productURL</td>
-	<td>Url of the product</td>
+	<td>country</td>
+	<td>Original country of the announce</td>
+</tr>
+<tr>
+	<td>price</td>
+	<td>Price of the item</td>
 </tr>
 </tbody>
 </table>
-### Dataframe 5
+
+### Dictionary structure 5
 ```
-getPopularSearch <- function(., text="", limit=10)
+get_popular_search(text='')
 ```  
 <table>
 <thead>
@@ -596,25 +539,25 @@ getPopularSearch <- function(., text="", limit=10)
 </thead>
 <tbody>
 <tr>
-	<td>AlternativeSearches</td>
+	<td>alternative</td>
 	<td>Alternatives search for a given keyword</td>
 </tr>
 <tr>
-	<td>RelatedSearches</td>
+	<td>related</td>
 	<td>Related search for a given keyword</td>
 </tr>
 </tbody>
 </table>
-## Eventbrite
-### Dataframe
+## <a id="eventbrite"></a>Eventbrite
+### Dictionary structure
 ```
-searchEvents <- function(., text="")
+search(text='')
 ```  
 ```
-getPopularEvents <- function(.)
+get_popular()
 ```  
 ```
-getEventsCity <- function(., text="")
+get_by_city(text='')
 ```  
 <table>
 <thead>
@@ -641,11 +584,11 @@ getEventsCity <- function(., text="")
 	<td>Longitude of the event</td>
 </tr>
 <tr>
-	<td>num_past_events</td>
+	<td>pa</td>st
 	<td>Number of past events for the given group</td>
 </tr>
 <tr>
-	<td>num_future_events</td>
+	<td>future</td>
 	<td>Number of future events for the given group</td>
 </tr>
 <tr>
@@ -654,13 +597,14 @@ getEventsCity <- function(., text="")
 </tr>
 </tbody>
 </table>
-## Google Books
-### Dataframe
+
+## <a id="googlebooks"></a>Google Books
+### Dictionary structure
 ```
-searchByAuthor <- function(., author="", limit=10)
+search_by_author(author='', limit=10)
 ```  
 ```
-searchBook <- function(., text="", limit=10)
+search_book(text='', limit=10)
 ```  
 <table>
 <thead>
@@ -686,14 +630,23 @@ searchBook <- function(., text="", limit=10)
 	<td>pageCount</td>
 	<td>Number of pages</td>
 </tr>
+<tr>
+	<td>description</td>
+	<td>Description of the book</td>
+</tr>
+<tr>
+	<td>categories</td>
+	<td>Categories of the book</td>
+</tr>
 </tbody>
 </table>
-## Google Trends
+
+## <a id="googletrends"></a>Google Trends
 ### Countries available
 South Africa,Germany,Saudi Arabia,Argentina,Australia,Austria,Belgium,Brazil,Canada,Chilia,Colombia,South Corea,Denemark,Egypt,Spain,USA,Finland,France,Greece,Hong Kong,Hongria,India,Indonesia,Israel,Italia,Japan,Kenya,Malaisia,Mexico,Nigeria,Norway,Holland,Philippines,Poland,Portugal,Czech Republic,Roumania,UK,Russia,Singapour,Sweden,Switzerland,Taiwan,Thailand,Turkey,Ukraine,Vietnam   
-### Dataframe
+### Dictionary structure
 ```
-getTrends <- function(.,name="USA")
+get_trends(name='USA')
 ```  
 <table>
 <thead>
@@ -709,36 +662,11 @@ getTrends <- function(.,name="USA")
 </tr>
 </tbody>
 </table>
-## Imdb 
-### Dataframe
+
+## <a id="imdb"></a>Imdb 
+### Dictionary structure
 ```
-searchOmdb <- function(., text="")
-```  
-<table>
-<thead>
-<tr>
-	<th>Column</th>
-	<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td> Title </td>
-	<td>Title of the media</td>
-</tr>
-<tr>
-	<td> Year </td>
-	<td>Year of release</td>
-</tr>
-<tr>
-	<td> Type </td>
-	<td>Type of media</td>
-</tr>
-</tbody>
-</table>
-### Dataframe 2
-```
-searchTitle <- function(., text="")
+search_omdb(text='')
 ```  
 <table>
 <thead>
@@ -753,14 +681,19 @@ searchTitle <- function(., text="")
 	<td>Title of the media</td>
 </tr>
 <tr>
-	<td> description </td>
-	<td>Description of the media</td>
+	<td> year </td>
+	<td>Year of release</td>
+</tr>
+<tr>
+	<td> type </td>
+	<td>Type of media</td>
 </tr>
 </tbody>
 </table>
-### Dataframe 3
+
+### Dictionary structure 2
 ```
-searchName <- function(., text="")
+search_title(text='')
 ```  
 <table>
 <thead>
@@ -771,19 +704,46 @@ searchName <- function(., text="")
 </thead>
 <tbody>
 <tr>
-	<td> - </td>
-	<td>Names of actor</td>
+	<td> popular </td>
+	<td>Title of the media</td>
+</tr>
+<tr>
+	<td> exact </td>
+	<td>Exact title of the media</td>
 </tr>
 </tbody>
 </table>
 
-## Instagram
-### Dataframe
+### Dictionary structure 3
 ```
-getPopular <- function(., limit=10)
+search_name(text='')
+```  
+<table>
+<thead>
+<tr>
+	<th>Column</th>
+	<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td> popular </td>
+	<td>Name of the media</td>
+</tr>
+<tr>
+	<td> exact </td>
+	<td>Exact name of the media</td>
+</tr>
+</tbody>
+</table>
+
+## <a id="instagram"></a>Instagram
+### Dictionary structure
+```
+get_popular(limit=10)
 ```
 ```
-searchByCoordinates <- function(.,lat=48.858844,lon=2.294351,limit=10)
+search_by_coordinates(lat=48.858844,lon=2.294351,limit=10)
 ```
 <table>
 <thead>
@@ -798,12 +758,12 @@ searchByCoordinates <- function(.,lat=48.858844,lon=2.294351,limit=10)
 	<td>Lnk of the content</td>
 </tr>
 <tr>
-	<td> filter </td>
-	<td>Filter used for the picture</td>
+	<td> name </td>
+	<td>Name of the picture</td>
 </tr>
 <tr>
-	<td> users_in_photo </td>
-	<td>Users tagged in the picture</td>
+	<td> com </td>
+	<td>Comments of the picture</td>
 </tr>
 <tr>
 	<td> latitude </td>
@@ -814,16 +774,8 @@ searchByCoordinates <- function(.,lat=48.858844,lon=2.294351,limit=10)
 	<td>Longitude of the content</td>
 </tr>
 <tr>
-	<td> loc_name </td>
-	<td>Place's name of the content</td>
-</tr>
-<tr>
 	<td> count_com </td>
 	<td>Number of commentaries</td>
-</tr>
-<tr>
-	<td> data_com </td>
-	<td>Text of the commentaries</td>
 </tr>
 <tr>
 	<td> count_like </td>
@@ -834,10 +786,11 @@ searchByCoordinates <- function(.,lat=48.858844,lon=2.294351,limit=10)
 	<td>Title of the content</td>
 </tr>
 </tbody>
-</table>  
-### Dataframe 2
+</table>
+  
+### Dictionary structure 2
 ```
-getTags <- function(.,text="")
+get_tags(text='')
 ```  
 <table>
 <thead>
@@ -848,7 +801,7 @@ getTags <- function(.,text="")
 </thead>
 <tbody>
 <tr>
-	<td> media_count </td>
+	<td> count </td>
 	<td>Tag's popularity</td>
 </tr>
 <tr>
@@ -857,9 +810,10 @@ getTags <- function(.,text="")
 </tr>
 </tbody>
 </table>
-### Dataframe 3
+
+### Dictionary structure 3
 ```
-searchLocations <- function(.,lat=48.858844,lon=2.294351,limit=10)
+search_locations(lat=48.858844,lon=2.294351,limit=10)
 ```  
 <table>
 <thead>
@@ -883,9 +837,9 @@ searchLocations <- function(.,lat=48.858844,lon=2.294351,limit=10)
 </tr>
 </tbody>
 </table>
-### Dataframe 4
+### Dictionary structure 4
 ```
-searchUsers <- function(.,text="",limit=10)
+search_users(text='',limit=10)
 ```  
 <table>
 <thead>
@@ -900,7 +854,7 @@ searchUsers <- function(.,text="",limit=10)
 	<td>User's name</td>
 </tr>
 <tr>
-	<td> full_name </td>
+	<td> name </td>
 	<td>Full user's name</td>
 </tr>
 <tr>
@@ -908,16 +862,16 @@ searchUsers <- function(.,text="",limit=10)
 	<td>User's id</td>
 </tr>
 <tr>
-	<td> profile_picture </td>
+	<td> pic </td>
 	<td>User's profile picture</td>
 </tr>
 </tbody>
 </table>
 
-## OSM 
-### Dataframe
+## <a id="osm"></a>OSM 
+### Dictionary structure
 ```
-searchLatestNotes <- function(., text="", limit=10)
+search_notes(text='', limit=10)
 ```  
 <table>
 <thead>
@@ -928,22 +882,19 @@ searchLatestNotes <- function(., text="", limit=10)
 </thead>
 <tbody>
 <tr>
-	<td> V1 </td>
-	<td>Latitude of the place</td>
+	<td> coordinates </td>
+	<td>Coordinates of the place</td>
 </tr>
 <tr>
-	<td> V2 </td>
-	<td>Longitude of the place</td>
-</tr>
-<tr>
-	<td> V3 </td>
-	<td>Description of the place</td>
+	<td> comments </td>
+	<td>Comments on the place</td>
 </tr>
 </tbody>
 </table>
-### Dataframe 2
+
+### Dictionary structure 2
 ```
-search <- function(., text="", limit=10)
+search(text='', limit=10)
 ```  
 <table>
 <thead>
@@ -954,15 +905,15 @@ search <- function(., text="", limit=10)
 </thead>
 <tbody>
 <tr>
-	<td> lat </td>
+	<td> latitude </td>
 	<td>Latitude of the place</td>
 </tr>
 <tr>
-	<td> lon </td>
+	<td> longitude </td>
 	<td>Longitude of the place</td>
 </tr>
 <tr>
-	<td> display_name </td>
+	<td> name </td>
 	<td>Names of the place</td>
 </tr>
 <tr>
@@ -971,9 +922,10 @@ search <- function(., text="", limit=10)
 </tr>
 </tbody>
 </table>
-### Dataframe 3
+
+### Dictionary structure 3
 ```
-getCoordinatesCity <- function(., text="")
+get_coordinates_city(text='')
 ```  
 <table>
 <thead>
@@ -984,22 +936,23 @@ getCoordinatesCity <- function(., text="")
 </thead>
 <tbody>
 <tr>
-	<td> lat </td>
+	<td> latitude </td>
 	<td>Latitude of the place</td>
 </tr>
 <tr>
-	<td> lon </td>
+	<td> longitude </td>
 	<td>Longitude of the place</td>
 </tr>
 </tbody>
 </table>
-## Panoramio
-### Dataframe
+
+## <a id="panoramio"></a>Panoramio
+### Dictionary structure
 ```
-getPopularWorldPhotos <- function(., limit=10)
+get_popular_world(limit=10)
 ```  
 ```
-getPhotosArea <- function(., latitude=0, longitude=0, range=5, limit=10)
+get_photos_area(latitude=0, longitude=0, range=5, limit=10)
 ```  
 <table>
 <thead>
@@ -1018,37 +971,35 @@ getPhotosArea <- function(., latitude=0, longitude=0, range=5, limit=10)
 	<td>Longitude of the place</td>
 </tr>
 <tr>
-	<td>owner_name</td>
+	<td>owner</td>
 	<td>Owner of the picture</td>
 </tr>
 <tr>
-	<td>photo_file_url</td>
+	<td>url</td>
 	<td>Url of the picture</td>
 </tr>
 <tr>
-	<td>photo_title</td>
+	<td>title</td>
 	<td>Title of the picture</td>
 </tr>
 <tr>
-	<td>upload_date</td>
+	<td>date</td>
 	<td>Date of the picture</td>
 </tr>
 </tbody>
 </table>
-## Reddit
-### Dataframe
+
+## <a id="reddit"></a>Reddit
+### Dictionary structure
 ```
-searchArticle <- function(., text="", limit=10)
+search(text='', limit=10)
 ```  
 ```
-getHotTopics <- function(.,limit=10)
+get_hot(limit=10)
 ```  
 ```
-getControversialTopics <- function(.,limit=10)
+get_controversial(limit=10)
 ```  
-```
-getRandomTopics <- function(.)
-```
 <table>
 <thead>
 <tr>
@@ -1082,14 +1033,16 @@ getRandomTopics <- function(.)
 	<td>Subreddit of the article</td>
 </tr>
 <tr>
-	<td>selftext</td>
+	<td>text</td>
 	<td>Text of the article</td>
 </tr>
 </tbody>
 </table>
-### Dataframe 2
+
+### Dictionary structure 2
 ```
-getPopularSubreddits <- function(.,limit=10)
+get_popular_subreddits(limit=10)
+search_subreddits(text='',limit=10)
 ```  
 <table>
 <thead>
@@ -1100,7 +1053,7 @@ getPopularSubreddits <- function(.,limit=10)
 </thead>
 <tbody>
 <tr>
-	<td>display_name</td>
+	<td>name</td>
 	<td>Name of the subreddit</td>
 </tr>
 <tr>
@@ -1109,42 +1062,17 @@ getPopularSubreddits <- function(.,limit=10)
 </tr>
 </tbody>
 </table>
-### Dataframe 3
+
+## <a id="rubygems"></a>RubyGems
+### Dictionary structure
 ```
-getPopularSubreddits <- function(.,limit=10)
-```  
-<table>
-<thead>
-<tr>
-	<th>Column</th>
-	<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-	<td>display_name</td>
-	<td>Name of the subreddit</td>
-</tr>
-<tr>
-	<td>subscribers</td>
-	<td>Number of users for the subreddit</td>
-</tr>
-<tr>
-	<td>title</td>
-	<td>Description of the subreddit</td>
-</tr>
-</tbody>
-</table>
-## RubyGems
-### Dataframe
-```
-search <- function(., text="")
+search(text='')
 ```  
 ```
-latestAdded <- function(.)
+latest_added()
 ```  
 ```
-latestUpdated <- function(.)
+latest_updated()
 ```  
 <table>
 <thead>
@@ -1167,14 +1095,15 @@ latestUpdated <- function(.)
 	<td>Description of the gem</td>
 </tr>
 <tr>
-	<td>homepage_uri</td>
+	<td>url</td>
 	<td>Url of the projects gem</td>
 </tr>
 </tbody>
 </table>
-### Dataframe 2
+
+### Dictionary structure 2
 ```
-totalDownloadGems <- function(.)
+total_download_gems <- function(.)
 ```   
 <table>
 <thead>
@@ -1190,16 +1119,17 @@ totalDownloadGems <- function(.)
 </tr>
 </tbody>
 </table>
-## Soundcloud
-### Dataframe
+
+## <a id="soundcloud"></a>Soundcloud
+### Dictionary structure
 ```
-searchTracks <- function(., text="", limit=10)
+search_tracks(text='', limit=10)
 ```  
 ```
-getInfosTrack <- function(., id="182242225")
+get_infos_track(idc=182242225)
 ```  
 ```
-getLatestTracks <- function(., limit=10)
+get_latest_tracks(limit=10)
 ```  
 <table>
 <thead>
@@ -1214,15 +1144,15 @@ getLatestTracks <- function(., limit=10)
 	<td>Title of the track</td>
 </tr>
 <tr>
-	<td>download_count</td>
+	<td>downloads</td>
 	<td>Number of downloads</td>
 </tr>
 <tr>
-	<td>favoritings_count</td>
+	<td>favorites</td>
 	<td>Number of favorites</td>
 </tr>
 <tr>
-	<td>comment_count</td>
+	<td>comments</td>
 	<td>Number of comments</td>
 </tr>
 <tr>
@@ -1234,7 +1164,7 @@ getLatestTracks <- function(., limit=10)
 	<td>Duration of the track</td>
 </tr>
 <tr>
-	<td>tag_list</td>
+	<td>tags</td>
 	<td>Tags for the track</td>
 </tr>
 <tr>
@@ -1242,14 +1172,15 @@ getLatestTracks <- function(., limit=10)
 	<td>Description of the track</td>
 </tr>
 <tr>
-	<td>permalink_url</td>
+	<td>url</td>
 	<td>Url of the track</td>
 </tr>
 </tbody>
 </table>
-### Dataframe 2
+
+### Dictionary structure 2
 ```
-searchUsers <- function(., text="", limit=10)
+search_users(text='', limit=10)
 ```  
 <table>
 <thead>
@@ -1268,7 +1199,7 @@ searchUsers <- function(., text="", limit=10)
 	<td>Country of the user</td>
 </tr>
 <tr>
-	<td>full_name</td>
+	<td>name</td>
 	<td>Name of the user</td>
 </tr>
 <tr>
@@ -1284,18 +1215,19 @@ searchUsers <- function(., text="", limit=10)
 	<td>Webiste of the user</td>
 </tr>
 <tr>
-	<td>track_count</td>
+	<td>tracks</td>
 	<td>Number of tracks</td>
 </tr>
 <tr>
-	<td>followers_count</td>
+	<td>followers</td>
 	<td>Number of followers</td>
 </tr>
 </tbody>
 </table>
-### Dataframe 3
+
+### Dictionary structure 3
 ```
-searchGroups <- function(., text="", limit=10)
+search_groups(text='', limit=10)
 ```  
 <table>
 <thead>
@@ -1310,19 +1242,19 @@ searchGroups <- function(., text="", limit=10)
 	<td>Name of the group</td>
 </tr>
 <tr>
-	<td>track_count</td>
+	<td>tracks</td>
 	<td>Number of groups tracks</td>
 </tr>
 <tr>
-	<td>members_count</td>
+	<td>members</td>
 	<td>Number of groups members</td>
 </tr>
 <tr>
-	<td>contributors_count</td>
+	<td>contributors</td>
 	<td>Number of groups contributors</td>
 </tr>
 <tr>
-	<td>permalink_url</td>
+	<td>url</td>
 	<td>Url of the group</td>
 </tr>
 <tr>
@@ -1331,9 +1263,10 @@ searchGroups <- function(., text="", limit=10)
 </tr>
 </tbody>
 </table>
-### Dataframe 4
+
+### Dictionary structure 4
 ```
-getLatestComments <- function(., limit=10)
+get_latest_comments(limit=10)
 ```  
 <table>
 <thead>
@@ -1344,19 +1277,20 @@ getLatestComments <- function(., limit=10)
 </thead>
 <tbody>
 <tr>
-	<td>track_id</td>
+	<td>id</td>
 	<td>Id of the track</td>
 </tr>
 <tr>
-	<td>body</td>
+	<td>text</td>
 	<td>Latest comment for the track</td>
 </tr>
 </tbody>
 </table>
-## Tumblr
-### Dataframe
+
+## <a id="tumblr"></a>Tumblr
+### Dictionary structure
 ```
-searchByTag <- function(., text="", limit=10)
+search(text='', limit=10)
 ```  
 <table>
 <thead>
@@ -1367,7 +1301,7 @@ searchByTag <- function(., text="", limit=10)
 </thead>
 <tbody>
 <tr>
-	<td>post_url</td>
+	<td>url</td>
 	<td>Url of the post</td>
 </tr>
 <tr>
@@ -1383,20 +1317,16 @@ searchByTag <- function(., text="", limit=10)
 	<td>Tags for the post</td>
 </tr>
 <tr>
-	<td>note_count</td>
+	<td>note</td>
 	<td>Number of note for the post</td>
-</tr>
-<tr>
-	<td>source_url</td>
-	<td>Url of the source</td>
 </tr>
 </tbody>
 </table>
 
-## Venmo
-### Dataframe
+## <a id="venmo"></a>Venmo
+### Dictionary structure
 ```
-getPublic <- function(.)
+search()
 ```  
 <table>
 <thead>
@@ -1411,18 +1341,19 @@ getPublic <- function(.)
 	<td>Message of the post</td>
 </tr>
 <tr>
-	<td>link</td>
+	<td>url</td>
 	<td>Link of the post</td>
 </tr>
 </tbody>
 </table>
-## Vine
-### Dataframe
+
+## <a id="vine"></a>Vine
+### Dictionary structure
 ```
-getPopular <- function(.)
+get_popular()
 ```  
 ```
-searchByTag <- function(., tag="")
+search(text='')
 ```   
 <table>
 <thead>
@@ -1437,33 +1368,34 @@ searchByTag <- function(., tag="")
 	<td>Description of the post</td>
 </tr>
 <tr>
-	<td>link</td>
+	<td>url</td>
 	<td>Link of the post</td>
 </tr>
 </tbody>
 </table>
-## Wikipedia
-### Dataframe
+
+## <a id="wikipedia"></a>Wikipedia
+### Dictionary structure
 ```
-getLinkSphere <- function(., search="", nblimit=10)
+get_link_sphere(text='', limit=10)
 ```  
 ```
-getLinks <- function(., search="", nblimit=10)
+get_links(text='',limit=10)
 ```  
 ```
-searchByPrefix <- function(., search="", nblimit=10)
+search_prefix(text='', limit=10)
 ```  
 ```
-searchText <- function(.,search="",nblimit=10)
+search_text(text='',limit=10)
 ```  
 ```
-searchGeo <- function(.,radius=1000,lat=0,long=0,nblimit=10)
+search_geo(radius=1000,lat=48.858844,long=2.294351,limit=10)
 ```  
 ```
-latestProtected <- function(.,nblimit=10)
+get_latest_protected(limit=10)
 ```  
 ```
-latestChanges <- function(.,nblimit=10)
+get_latest_changes(limit=10)
 ```  
 <table>
 <thead>
