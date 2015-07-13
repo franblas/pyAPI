@@ -8,12 +8,13 @@ Created on Thu Jun 11 16:54:02 2015
 from api import API
 
 class Pinterest(API):
-    
-    _class_name = 'Pinterest'    
+
+    _class_name = 'Pinterest'
     _category = 'Social'
     _help_url = 'https://developers.pinterest.com/api_docs/'
-    _api_url = 'https://api.pinterest.com/v3/'
-        
+    _version = '3'
+    _api_url = 'https://api.pinterest.com/v' + _version + '/'
+
     def _parsing_data(self,data,board=False):
         res = {'id':list(),'description':list(),'repins':list(),'likes':list(),'url':list(),'board':list()}
         for d in data['data']['pins']:
@@ -26,16 +27,16 @@ class Pinterest(API):
                 res['board'].append(self._tools.key_test('name',d['board']))
             else:
                 res['board'].append(self._tools.key_test('name',data['data']['board']))
-        return res        
+        return res
 
     def get_pins_by_user(self,user='ohjoy'):
         url = self._api_url+'pidgets/users/'+user+'/pins/'
         data = self._tools.data_from_url(url)
         self._increment_nb_call()
-        return self._parsing_data(data) 
-        
+        return self._parsing_data(data)
+
     def get_pins_by_board(self,user='ohjoy',board='travel'):
         url = self._api_url+'pidgets/boards/'+user+'/'+board+'/pins/'
         data = self._tools.data_from_url(url)
         self._increment_nb_call()
-        return self._parsing_data(data,board=True) 
+        return self._parsing_data(data,board=True)

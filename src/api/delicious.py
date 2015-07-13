@@ -12,7 +12,8 @@ class Delicious(API):
     _class_name = 'Delicious'
     _category = 'Social'
     _help_url = 'https://delicious.com/rss'
-    _api_url = 'http://feeds.delicious.com/v2/json/'
+    _version = '2'
+    _api_url = 'http://feeds.delicious.com/v' + _version + '/json/'
 
     def _parsing_data(self,data):
         res = {'d':list(),'u':list(),'t':list()}
