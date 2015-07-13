@@ -3,8 +3,9 @@ Data from multiple APIs with python
 
 ## Install package  
 ```
-python setup.py install
-```
+cd src/  
+python setup.py install  
+```  
 
 ## Usage
 ```
