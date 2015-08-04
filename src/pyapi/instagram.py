@@ -19,7 +19,7 @@ class Instagram(API):
         self._api_key = apikey
 
     def _parsing_data(self,data):
-        res = {'latitude':list(),'longitude':list(),'name':list(),'count_com':list(),'com':list(),'count_like':list(),'title':list()}
+        res = {'latitude':list(),'longitude':list(),'name':list(),'count_com':list(),'com':list(),'count_like':list(),'title':list(),'url':list()}
         for d in data['data']:
             res['latitude'].append(self._tools.key_test('latitude',d['location'],'float'))
             res['longitude'].append(self._tools.key_test('longitude',d['location'],'float'))
@@ -28,6 +28,7 @@ class Instagram(API):
             res['com'].append(self._tools.key_test('data',d['comments'],'list'))
             res['count_like'].append(self._tools.key_test('count',d['likes'],'int'))
             res['title'].append(self._tools.key_test('text',d['caption']))
+            res['url'].append(self._tools.key_test('link',d))
         return res
 
     def _parsing_data2(self,data):
@@ -60,8 +61,8 @@ class Instagram(API):
         self._increment_nb_call()
         return self._parsing_data(data)
 
-    def search_by_coordinates(self,lat=48.858844,lon=2.294351,limit=10):
-        url = self._api_url+'media/search?lat='+str(lat)+'&lng='+str(lon)+'&count='+str(limit)+'&client_id='+self._api_key
+    def search_by_coordinates(self,lat=48.858844,lon=2.294351, radius=2, limit=10):
+        url = self._api_url+'media/search?lat='+str(lat)+'&lng='+str(lon)+'&distance='+str(radius*1000)+'&count='+str(limit)+'&client_id='+self._api_key
         data = self._tools.data_from_url(url)
         self._increment_nb_call()
         return self._parsing_data(data)

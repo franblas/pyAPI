@@ -49,3 +49,9 @@ class OSM(API):
     def get_coordinates_city(self,text=''):
         res = self.search(text,limit=2)
         return res['latitude'][0],res['longitude'][0]
+
+    def search_by_coordinates(self, text='', lat=48.858844, lon=2.294351, limit=10):
+        url = self._api_url2+'search?q='+str(text)+' near ['+str(lat)+','+str(lon)+']&format=json&limit='+str(limit)
+        data = self._tools.data_from_url(url)
+        self._increment_nb_call()
+        return self._parsing_data2(data)

@@ -31,12 +31,28 @@ class Eventbrite(API):
             res['description'].append(self._tools.key_test('text',d['description']))
         return res
 
+    def _parsing_data2(self,data):
+        res = {'url':list(),'name':list(),'start':list(),'end':list(),'description':list()}
+        for d in data['events']:
+            res['url'].append(self._tools.key_test('url',d))
+            res['name'].append(self._tools.key_test('text',d['name']))
+            res['start'].append(self._tools.key_test('local',d['start']))
+            res['end'].append(self._tools.key_test('local',d['end']))
+            res['description'].append(self._tools.key_test('text',d['description']))
+        return res
+
     def search(self,text=''):
         text = text.replace(' ','%20')
         url = self._api_url+'events/search/?token='+self._api_key+'&q='+text
         data = self._tools.data_from_url(url)
         self._increment_nb_call()
         return self._parsing_data(data)
+
+    def search_by_coordinates(self, lat=48.87, lon=2.30, radius=2, units='km'):
+        url = self._api_url+'events/search/?token='+self._api_key+'&location.latitude='+str(lat)+'&location.longitude='+str(lon)+'&location.within='+str(radius)+units
+        data = self._tools.data_from_url(url)
+        self._increment_nb_call()
+        return self._parsing_data2(data)
 
     def get_popular(self):
         url = self._api_url+'events/search/?token='+self._api_key+'&popular=true'

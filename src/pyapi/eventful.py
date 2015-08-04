@@ -8,15 +8,15 @@ Created on Fri Jun 12 13:40:24 2015
 from api import API
 
 class Eventful(API):
-    
-    _class_name = 'Eventful'    
+
+    _class_name = 'Eventful'
     _category = 'Event'
     _help_url = 'http://api.eventful.com/docs/'
     _api_url = 'http://api.eventful.com/json/'
-        
+
     def __init__(self,apikey):
         self._api_key = apikey
-        
+
     def _parsing_data(self,data):
         res = {'id':list(),'description':list(),'title':list(),'country':list(),'city':list(),'address':list(),'date':list(),'latitude':list(),'longitude':list(),'url':list()}
         for d in data['events']['event']:
@@ -30,7 +30,7 @@ class Eventful(API):
             res['latitude'].append(self._tools.key_test('latitude',d,'float'))
             res['longitude'].append(self._tools.key_test('longitude',d,'float'))
             res['url'].append(self._tools.key_test('url',d))
-        return res        
+        return res
 
     def _parsing_data2(self,data):
         res = {'id':list(),'description':list(),'name':list(),'country':list(),'city':list(),'address':list(),'latitude':list(),'longitude':list(),'url':list()}
@@ -63,8 +63,14 @@ class Eventful(API):
         url = self._api_url+'events/search?app_key='+self._api_key+'&keywords='+text+'&location='+location+'&date=Future&page_size='+str(limit)
         data = self._tools.data_from_url(url)
         self._increment_nb_call()
-        return self._parsing_data(data) 
- 
+        return self._parsing_data(data)
+
+    def search_events_by_coordinates(self, lat=48.87, lon=2.30, radius=2, units='km', limit=10):
+        url = self._api_url+'events/search?app_key='+self._api_key+'&where='+str(lat)+','+str(lon)+'&within='+str(radius)+'&units='+units+'&date=Future&page_size='+str(limit)
+        data = self._tools.data_from_url(url)
+        self._increment_nb_call()
+        return self._parsing_data(data)
+
     def search_venues(self,text='',location='paris',limit=10):
         text = text.replace(' ','+')
         location = location.replace(' ','+')
@@ -72,7 +78,7 @@ class Eventful(API):
         data = self._tools.data_from_url(url)
         self._increment_nb_call()
         return self._parsing_data2(data)
-        
+
     def search_demands(self,location='paris',limit=10):
         location = location.replace(' ','+')
         url = self._api_url+'demands/search?app_key='+self._api_key+'&location='+location+'&page_size='+str(limit)

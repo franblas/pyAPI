@@ -58,3 +58,9 @@ class CinqCentPx(API):
         data = self._tools.data_from_url(url)
         self._increment_nb_call()
         return self._parsing_data(data)
+
+    def search_by_coordinates(self,lat=48.87, lon=2.30, radius=2, units='km', limit=10):
+        url = self._api_url+'photos/search?geo='+str(lat)+','+str(lon)+','+str(radius)+units+'&rpp='+str(limit)+'&consumer_key='+self._api_key
+        data = self._tools.data_from_url(url)
+        self._increment_nb_call()
+        return self._parsing_data(data)
